@@ -10,10 +10,13 @@
   },
   "license": "Apache-2.0",
   "icon": "assets/gueye/icon.png",
-  "environment": "server",
+  "environment": "*",
   "entrypoints": {
     "main": [
-      "dev.stashy.gueye.Gueye"
+      {
+        "adapter": "kotlin",
+        "value": "dev.stashy.gueye.Gueye"
+      }
     ]
   },
   "mixins": [
@@ -22,6 +25,7 @@
   "depends": {
     "fabricloader": ">=0.12.12",
     "fabric": "*",
-    "minecraft": "1.18.1"
+    "minecraft": "1.18.x",
+    "fabric-language-kotlin": ">=1.7.1+kotlin.1.6.10"
   }
 }
